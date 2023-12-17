@@ -38,7 +38,7 @@ jobs:
         registry-url: 'https://registry.npmjs.org/'
     - run: npm ci
     - run: npm audit signatures
-    - run: npm publish --provenance --access public
+    - run: npm publish --provenance --access public --tag development
       env: 
         NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
       
