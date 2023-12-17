@@ -1,0 +1,37 @@
+{
+  "name": "docsify-generate-sidebar",
+  "license": "MIT",
+  "description": "A docsify plugin that generates sidebar based on directory structure",
+  "version": "0.0.0-development",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "semantic-release": "semantic-release --branches main",
+    "commit": "cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MithunKarthick/docsify-generate-sidebar.git"
+  },
+  "keywords": [
+    "docsify",
+    "generate",
+    "sidebar",
+    "plugin"
+  ],
+  "author": {
+    "name": "Mithun Karthick",
+    "email": "mithunkarthick3@gmail.com",
+    "url": "https://github.com/MithunKarthick"
+  },
+  "bugs": {
+    "url": "https://github.com/MithunKarthick/docsify-generate-sidebar/issues"
+  },
+  "homepage": "https://github.com/MithunKarthick/docsify-generate-sidebar#readme",
+  "bin": {
+    "docsify-generate-sidebar": ".bin/cli.js"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
