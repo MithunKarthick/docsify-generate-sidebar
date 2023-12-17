@@ -7,7 +7,7 @@ A docsify plugin that generates sidebar based on directory structure.
 ## Install
 
 ```
-npm install --save-dev docsify-auto-sidebar
+npm install --save-dev docsify-generate-sidebar
 ```
 
 ## Usage

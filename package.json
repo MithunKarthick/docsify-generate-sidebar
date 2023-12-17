@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "publish": "npm version patch || npm publish --access public --tag development",
+    "publish": "npm publish --access public --tag development",
     "semantic-release": "semantic-release --branches main",
     "commit": "cz"
   },
