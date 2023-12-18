@@ -12,24 +12,13 @@ function generateContent(directory) {
     if (stats.isDirectory()) {
       // Recursive call for subdirectories
       const subdirectoryContents = generateContent(filePath);
-      if (
-        subdirectoryContents.length > 0 &&
-        fs.existsSync(path.join(filePath, "README.md"))
-      ) {
-        content.push(
-          `- [${formatFileName(file)}](${escapedFilePath}/README.md)`,
-          ...subdirectoryContents.map((item) => `  ${item}`)
-        );
+      if ( subdirectoryContents.length > 0 && fs.existsSync(path.join(filePath, "README.md"))) {
+        content.push(`- [${formatFileName(file)}](${escapedFilePath}/README.md)`, ...subdirectoryContents.map((item) => `  ${item}`));
       } else if (subdirectoryContents.length > 0) {
-        content.push(
-          `- ${formatFileName(file)}`,
-          ...subdirectoryContents.map((item) => `  ${item}`)
-        );
+        content.push(`- ${formatFileName(file)}`, ...subdirectoryContents.map((item) => `  ${item}`));
       } else if (fs.existsSync(path.join(filePath, "README.md"))) {
         // Link to README.md if present in the directory
-        content.push(
-          `- [${formatFileName(file)}](${escapedFilePath}/README.md)`
-        );
+        content.push(`- [${formatFileName(file)}](${escapedFilePath}/README.md)`);
       } else {
         // If no README.md, just link to the directory
         content.push(`- [${formatFileName(file)}](${escapedFilePath})`);
@@ -48,7 +37,8 @@ function generateContent(directory) {
 }
 
 function escapeSpaces(filePath) {
-  return filePath.replace(/ /g, "%20");
+  const escapedFilePath = filePath.replace(/ /g, "%20");
+  return escapedFilePath.split('/docs/')[1];
 }
 
 function formatFileName(filename) {
