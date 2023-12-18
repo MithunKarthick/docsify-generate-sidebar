@@ -4,7 +4,6 @@ const path = require("path");
 function generateContent(directory) {
   const files = fs.readdirSync(directory);
   const content = [];
-
   files.forEach((file) => {
     const filePath = path.join(directory, file);
     const escapedFilePath = escapeSpaces(filePath);
