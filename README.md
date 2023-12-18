@@ -1,8 +1,13 @@
-# docsify-auto-sidebar
+# docsify-generate-sidebar
 [![Test](https://github.com/MithunKarthick/docsify-generate-sidebar/actions/workflows/test.yml/badge.svg)](https://github.com/MithunKarthick/docsify-generate-sidebar/actions/workflows/test.yml)
 <!-- [![Publish](https://github.com/MithunKarthick/docsify-generate-sidebar/actions/workflows/publish.yml/badge.svg)](https://github.com/MithunKarthick/docsify-generate-sidebar/actions/workflows/publish.yml) -->
 
-A docsify plugin that generates sidebar based on directory structure.
+A [docsify](https://docsify.js.org/#/) plugin that generates [sidebar](https://docsify.js.org/#/more-pages?id=sidebar) based on directory structure.
+
+
+> [!CAUTION]
+> This package is still in development and has many bugs. A stable version is expected very soon.
+
 
 ## Install
 
