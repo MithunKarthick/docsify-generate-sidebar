@@ -9,7 +9,7 @@
     "pub": "npm version patch && npm publish --access public --tag development",
     "semantic-release": "semantic-release --branches main",
     "commit": "cz",
-    "prebuild": "rimraf bin",
+    "prebuild": "rimraf .bin",
     "build": "rollup -c"
   },
   "repository": {

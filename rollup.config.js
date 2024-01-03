@@ -1,4 +1,5 @@
-import executable from 'rollup-plugin-executable'
+// import executable from 'rollup-plugin-executable'
+var executable = require('rollup-plugin-executable')
 
 module.exports = {
   input: 'lib/cli.js', // Entry file
