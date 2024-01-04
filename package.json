@@ -6,11 +6,11 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "pub": "npm version patch && npm publish --access public --tag development",
-    "semantic-release": "semantic-release --branches main",
     "commit": "cz",
     "prebuild": "rimraf .bin",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prerelease": "npm run build",
+    "release": "standard-version -a"
   },
   "repository": {
     "type": "git",
@@ -39,5 +39,8 @@
     "rimraf": "^5.0.5",
     "rollup": "^4.9.2",
     "rollup-plugin-executable": "^1.6.3"
+  },
+  "dependencies": {
+    "standard-version": "^9.5.0"
   }
 }
