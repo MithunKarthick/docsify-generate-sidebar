@@ -1,4 +1,3 @@
-// import executable from 'rollup-plugin-executable'
 var executable = require('rollup-plugin-executable')
 
 module.exports = {
