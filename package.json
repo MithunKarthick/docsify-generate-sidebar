@@ -2,7 +2,7 @@
   "name": "docsify-generate-sidebar",
   "license": "MIT",
   "description": "A docsify plugin that generates sidebar based on directory structure",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "main": "bin/generator.js",
   "scripts": {
     "test": "jest",
