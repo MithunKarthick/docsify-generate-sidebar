@@ -4,11 +4,6 @@
 
 A [docsify](https://docsify.js.org/#/) plugin that generates [sidebar](https://docsify.js.org/#/more-pages?id=sidebar) based on directory structure.
 
-
-> [!CAUTION]
-> This package is still in development and has many bugs. A stable version is expected very soon.
-
-
 ## Install
 
 ```
@@ -22,7 +17,7 @@ Add script into package.json:
 ```
 {
   "scripts": {
-    "generate-sidebar": "docsify-generate-sidebar"
+    "generate": "docsify-generate-sidebar <content-path> <sidebar-path>"
   }
 }
 ```
@@ -30,11 +25,15 @@ Add script into package.json:
 Run script:
 
 ```
-npm run generate-sidebar
+npm run generate
 ```
 
+By default the root path is considered. You can change this by providing the `content-path` argument.
+Likewise sidebat path is by default will be same as the `content-path`. Change this by passing `sidebar-path`
 
-## This
+
+
+For Example, the below structure
 
 ```
 pages 
@@ -57,8 +56,10 @@ pages
 │           │   README.md
 │           └───SubChildContent1.md
 ```
-## Will translate to this
 
+will be generate as below:
+
+```
 - [Parent_With_Readme](pages/01-Parent_With_Readme/README.md)
   - [Child](pages/01-Parent_With_Readme/Child/README.md)
     - [ChildContent](pages/01-Parent_With_Readme/Child/01-ChildContent.md)
@@ -69,4 +70,12 @@ pages
     - [ChildContent](pages/02-Parent_Without_Readme/Child/B-ChildContent.md)
     - [SubChild](pages/02-Parent_Without_Readme/Child/SubChild/README.md)
       - [SubChildContent1](pages/02-Parent_Without_Readme/Child/SubChild/SubChildContent1.md)
+```
+
+>[!NOTE]
+> The symbol `-` is considered as seperator. You can order the files with numbers separated by filenames. Only the names after seperator will be considered.
+
+## Todo
+
+- Add config to get files/filepaths that need to ignored
 
