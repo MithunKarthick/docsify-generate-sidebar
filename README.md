@@ -78,4 +78,6 @@ will be generate as below:
 ## Todo
 
 - Add config to get files/filepaths that need to ignored
+- Add release action in github
+- Add support for directories with space
 
